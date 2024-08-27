@@ -7,7 +7,7 @@ I have a dns server called [simpledns](https://github.com/jmeaster30/simpledns) 
 
 Because I don't want to fully pull in code for a few things we use some submodules:
 
-- [opnsense-tools](https://github.com/opnsense/tools)
+- [opnsense-tools](https://github.com/opnsense/tools) @ `./opnsense-tools`
   - This is a set of tools for packaging the plugin
-- [simpledns](https://github.com/jmeaster30/simpledns)
+- [simpledns](https://github.com/jmeaster30/simpledns) @ `./src/opnsense/scripts/syrency/simpledns`
   - This is the DNS server code :^)
