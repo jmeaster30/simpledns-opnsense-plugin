@@ -1,0 +1,1 @@
+<h1>Simple DNS :3</h1>

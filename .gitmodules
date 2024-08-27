@@ -1,0 +1,6 @@
+[submodule "opnsense-tools"]
+	path = opnsense-tools
+	url = git@github.com:opnsense/tools.git
+[submodule "src/opnsense/scripts/syrency/simpledns"]
+	path = src/opnsense/scripts/syrency/simpledns
+	url = git@github.com:jmeaster30/simpledns.git
