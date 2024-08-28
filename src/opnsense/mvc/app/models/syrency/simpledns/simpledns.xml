@@ -4,5 +4,63 @@
     Simple DNS server :3
   </description>
   <items>
+    <general>
+      <Enabled type="BooleanField">
+        <default>0</default>
+        <Required>Y</Required>
+      </Enabled>
+      <ListeningPort type="PortField">
+        <default>53</default>
+        <Required>Y</Required>
+      </ListeningPort>
+      <PassthroughPort type="PortField">
+        <default>42069</default>
+        <Required>Y</Required>
+      </PassthroughPort>
+      <ThreadCount type="IntegerField">
+        <default>8</default>
+        <Required>Y</Required>
+      </ThreadCount>
+      <UseUdp type="BooleanField">
+        <default>1</default>
+        <Required>Y</Required>
+      </UseUdp>
+      <UseTcp type="BooleanField">
+        <default>0</default>
+        <Required>Y</Required>
+      </UseTcp>
+      <DatabaseFile type="StringField">
+        <default>~/.config/syrency/simpledns.sqlite.db</default>
+        <Required>Y</Required>
+      </DatabaseFile>
+      <PassthroughDnsIps type="IpField">
+        <AsList>Y</AsList>
+        <default>1.1.1.1,8.8.8.8,75.75.75.75,75.75.76.76</default>
+        <Required>Y</Requied>
+        <ValidationMessage>Must be IPv4 addresses separated by commas</ValidationMessage> 
+      </PassthroughDnsIps>
+    </general>
+    <records>
+      <record type="ArrayField">
+        <enabled type="BooleanField">
+          <default>1</default>
+          <Required>Y</Required>
+        </enabled>
+        <id type="IntegerField" volatile="true"/>
+        <queryType type="QueryTypeField">
+          <default>A</default>
+          <Required>Y</Required>
+        </queryType>
+        <class type="IntegerField">
+          <default>1</default>
+        </class>
+        <ttl type="IntegerField">
+          <default>300</default>
+        </ttl>
+        <host type="HostnameField" />
+        <ip type="IpField" />
+        <priority type="IntegerField" />
+      </record>
+    </records>
   </items>
 </model>
